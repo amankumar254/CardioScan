@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+npm install
+
+echo
+echo "CardioScan setup complete."
+echo "Run: cd ml && python data_preprocessing.py"
+echo "Then: python train_model.py"
+echo "Then start backend and frontend in separate terminals."
